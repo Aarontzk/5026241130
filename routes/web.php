@@ -39,3 +39,10 @@ Route::get('p5', [PageController::class, 'p5']);
 Route::get('p6linktree', [PageController::class, 'p6linktree']);
 Route::get('p6instagram', [PageController::class, 'p6instagram']);
 Route::get('p7welcome', [PageController::class, 'p7welcome']);
+
+Route::get('/pegawai/cari', [PegawaiDBController::class, 'cari']);
+Route::get('/pegawai/tambah', [PegawaiDBController::class, 'tambah']);
+Route::post('/pegawai/store', [PegawaiDBController::class, 'store']);
+Route::get('/pegawai/edit/{id}', [PegawaiDBController::class, 'edit']);
+Route::post('/pegawai/update', [PegawaiDBController::class, 'update']);
+Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);

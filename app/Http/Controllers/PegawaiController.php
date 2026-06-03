@@ -27,4 +27,5 @@ class PegawaiController extends Controller
         return "Nama : " . $nama . ",<br>Umur : " . $umur .
             ", <br>Alamat : " . $alamat;
     }
+
 }
