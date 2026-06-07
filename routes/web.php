@@ -6,6 +6,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\BlogController ;
+use App\Http\Controllers\SandalDBController;
 
 
 Route::get('/', function () {
@@ -46,3 +47,11 @@ Route::post('/pegawai/store', [PegawaiDBController::class, 'store']);
 Route::get('/pegawai/edit/{id}', [PegawaiDBController::class, 'edit']);
 Route::post('/pegawai/update', [PegawaiDBController::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);
+
+Route::get('/sandal', [SandalDBController::class, 'indexsandal']);
+Route::get('/sandal/cari', [SandalDBController::class, 'cari']);
+Route::get('/sandal/tambah', [SandalDBController::class, 'tambah']);
+Route::post('/sandal/store', [SandalDBController::class, 'store']);
+Route::get('/sandal/edit/{kode}', [SandalDBController::class, 'edit']);
+Route::post('/sandal/update', [SandalDBController::class, 'update']);
+Route::get('/sandal/hapus/{kode}', [SandalDBController::class, 'hapus']);
