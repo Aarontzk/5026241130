@@ -7,6 +7,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\BlogController ;
 use App\Http\Controllers\SandalDBController;
+use App\Http\Controllers\BelanjaDBController;
 
 
 Route::get('/', function () {
@@ -55,3 +56,8 @@ Route::post('/sandal/store', [SandalDBController::class, 'store']);
 Route::get('/sandal/edit/{kode}', [SandalDBController::class, 'edit']);
 Route::post('/sandal/update', [SandalDBController::class, 'update']);
 Route::get('/sandal/hapus/{kode}', [SandalDBController::class, 'hapus']);
+
+Route::get('/belanja', [BelanjaDBController::class, 'index']);
+Route::get('/belanja/tambah', [BelanjaDBController::class, 'tambah']);
+Route::post('/belanja/store', [BelanjaDBController::class, 'store']);
+Route::get('/belanja/hapus/{id}', [BelanjaDBController::class, 'hapus']);
